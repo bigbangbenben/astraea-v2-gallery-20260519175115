@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astraea V2 Canon Gallery</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07060a;
+      --panel: #111019;
+      --line: rgba(222, 181, 92, 0.28);
+      --gold: #e4bd67;
+      --text: #f7eff9;
+      --muted: #c7b8cc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 75% 0%, rgba(106, 76, 157, 0.22), transparent 360px),
+        radial-gradient(circle at 12% 8%, rgba(188, 136, 55, 0.16), transparent 320px),
+        var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 6, 10, 0.88);
+      backdrop-filter: blur(14px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    header p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    main {
+      width: min(100%, 1040px);
+      margin: 0 auto;
+      padding: 14px;
+      display: grid;
+      gap: 18px;
+    }
+
+    figure {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #050408;
+    }
+
+    figcaption {
+      padding: 11px 12px 13px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+      border-top: 1px solid rgba(222, 181, 92, 0.18);
+    }
+
+    figcaption strong {
+      display: block;
+      color: var(--gold);
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Astraea V2 Canon Gallery</h1>
+    <p>Current adopted masters for mobile review.</p>
+  </header>
+  <main>
+    <figure>
+      <img src="01-astraea-core.png" alt="Astraea Core Character Master">
+      <figcaption><strong>1. Astraea Core Character Master V3.3</strong>角色身份、異色瞳、淚痣、黑髮與銀白前髮、解盤職責感。</figcaption>
+    </figure>
+    <figure>
+      <img src="02-hidden-door.png" alt="Hidden Door Master">
+      <figcaption><strong>2. Hidden Door Master V2.1</strong>純入口母圖；星辰貓不在此圖出現，留到開門動畫。</figcaption>
+    </figure>
+    <figure>
+      <img src="03-living-observatory.png" alt="Living Observatory Master">
+      <figcaption><strong>3. Living Observatory Master V2</strong>觀星閣世界空間、材質、穹頂、古金與深紫黑金系統。</figcaption>
+    </figure>
+    <figure>
+      <img src="04-astrology-desk.png" alt="Astrology Desk Master">
+      <figcaption><strong>4. Astrology Desk Master V2</strong>產品互動核心；星盤證據顯影平台。</figcaption>
+    </figure>
+    <figure>
+      <img src="05-xingchenmao.png" alt="Xingchenmao Mascot Master">
+      <figcaption><strong>5. Xingchenmao Mascot Master V2</strong>觀星閣引路者；親近、陪伴、但不搶 Astraea 權威。</figcaption>
+    </figure>
+    <figure>
+      <img src="06-armillary-spirit.png" alt="Mini Armillary Spirit Master">
+      <figcaption><strong>6. Mini Armillary Spirit Master V2.1</strong>有表情的微互動助手；活著的星象儀器。</figcaption>
+    </figure>
+  </main>
+</body>
+</html>

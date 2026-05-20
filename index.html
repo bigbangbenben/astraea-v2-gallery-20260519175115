@@ -1,126 +1,204 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Astraea V2 Canon Gallery</title>
+  <title>Astraea V2 Mobile Gallery</title>
   <style>
     :root {
       color-scheme: dark;
-      --bg: #07060a;
-      --panel: #111019;
-      --line: rgba(222, 181, 92, 0.28);
-      --gold: #e4bd67;
-      --text: #f7eff9;
-      --muted: #c7b8cc;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --bg: #08060d;
+      --panel: #14101c;
+      --line: #2f253b;
+      --text: #f4edf8;
+      --muted: #b9a9c6;
+      --gold: #d5a95f;
     }
-
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
-      background:
-        radial-gradient(circle at 75% 0%, rgba(106, 76, 157, 0.22), transparent 360px),
-        radial-gradient(circle at 12% 8%, rgba(188, 136, 55, 0.16), transparent 320px),
-        var(--bg);
+      background: var(--bg);
       color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
     }
-
     header {
       position: sticky;
       top: 0;
       z-index: 2;
-      padding: 14px 16px;
+      padding: 14px 14px 12px;
+      background: rgba(8, 6, 13, 0.92);
       border-bottom: 1px solid var(--line);
-      background: rgba(7, 6, 10, 0.88);
       backdrop-filter: blur(14px);
     }
-
     h1 {
       margin: 0;
-      font-size: 19px;
-      line-height: 1.2;
+      font-size: 20px;
       letter-spacing: 0;
     }
-
-    header p {
-      margin: 4px 0 0;
+    .sub {
+      margin-top: 4px;
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.4;
     }
-
+    nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-top: 12px;
+    }
+    nav a {
+      flex: 0 0 auto;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: #110d17;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 13px;
+    }
     main {
-      width: min(100%, 1040px);
-      margin: 0 auto;
       padding: 14px;
-      display: grid;
-      gap: 18px;
+      max-width: 980px;
+      margin: 0 auto;
     }
-
+    section {
+      margin: 0 0 28px;
+      scroll-margin-top: 110px;
+    }
+    h2 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    .note {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
     figure {
       margin: 0;
       overflow: hidden;
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       background: var(--panel);
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
     }
-
     img {
       display: block;
       width: 100%;
       height: auto;
       background: #050408;
     }
-
     figcaption {
-      padding: 11px 12px 13px;
+      padding: 9px 10px 10px;
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.35;
-      border-top: 1px solid rgba(222, 181, 92, 0.18);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
     }
-
-    figcaption strong {
-      display: block;
+    .status {
+      display: inline-block;
+      margin-right: 6px;
       color: var(--gold);
-      font-size: 15px;
-      margin-bottom: 3px;
+      font-weight: 700;
+    }
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      h1 { font-size: 24px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Astraea V2 Canon Gallery</h1>
-    <p>Current adopted masters for mobile review.</p>
+    <h1>Astraea V2 Mobile Gallery</h1>
+    <div class="sub">Updated night batch: 2026-05-20. Accepted art first; review-only drafts are not included.</div>
+    <nav>
+      <a href="#canon">Canon</a>
+      <a href="#xingchenmao">Xingchenmao</a>
+      <a href="#armillary">Armillary</a>
+      <a href="#opening">Opening</a>
+      <a href="#observatory">Observatory</a>
+      <a href="#hands">Astraea Hands</a>
+    </nav>
   </header>
   <main>
-    <figure>
-      <img src="01-astraea-core.png" alt="Astraea Core Character Master">
-      <figcaption><strong>1. Astraea Core Character Master V3.3</strong>角色身份、異色瞳、淚痣、黑髮與銀白前髮、解盤職責感。</figcaption>
-    </figure>
-    <figure>
-      <img src="02-hidden-door.png" alt="Hidden Door Master">
-      <figcaption><strong>2. Hidden Door Master V2.1</strong>純入口母圖；星辰貓不在此圖出現，留到開門動畫。</figcaption>
-    </figure>
-    <figure>
-      <img src="03-living-observatory.png" alt="Living Observatory Master">
-      <figcaption><strong>3. Living Observatory Master V2</strong>觀星閣世界空間、材質、穹頂、古金與深紫黑金系統。</figcaption>
-    </figure>
-    <figure>
-      <img src="04-astrology-desk.png" alt="Astrology Desk Master">
-      <figcaption><strong>4. Astrology Desk Master V2</strong>產品互動核心；星盤證據顯影平台。</figcaption>
-    </figure>
-    <figure>
-      <img src="05-xingchenmao.png" alt="Xingchenmao Mascot Master">
-      <figcaption><strong>5. Xingchenmao Mascot Master V2</strong>觀星閣引路者；親近、陪伴、但不搶 Astraea 權威。</figcaption>
-    </figure>
-    <figure>
-      <img src="06-armillary-spirit.png" alt="Mini Armillary Spirit Master">
-      <figcaption><strong>6. Mini Armillary Spirit Master V2.1</strong>有表情的微互動助手；活著的星象儀器。</figcaption>
-    </figure>
+    <section id="canon">
+      <h2>Canon Masters</h2>
+      <p class="note">The current six master references.</p>
+      <div class="grid">
+        <figure><img src="images/canon/01-astraea-core.png" alt="Astraea Core"><figcaption><span class="status">Canon</span>01 Astraea Core</figcaption></figure>
+        <figure><img src="images/canon/02-hidden-door.png" alt="Hidden Door"><figcaption><span class="status">Canon</span>02 Hidden Door</figcaption></figure>
+        <figure><img src="images/canon/03-living-observatory.png" alt="Living Observatory"><figcaption><span class="status">Canon</span>03 Living Observatory</figcaption></figure>
+        <figure><img src="images/canon/04-astrology-desk.png" alt="Astrology Desk"><figcaption><span class="status">Canon</span>04 Astrology Desk</figcaption></figure>
+        <figure><img src="images/canon/05-xingchenmao.png" alt="Xingchenmao"><figcaption><span class="status">Canon</span>05 Xingchenmao</figcaption></figure>
+        <figure><img src="images/canon/06-armillary-spirit.png" alt="Mini Armillary Spirit"><figcaption><span class="status">Canon</span>06 Mini Armillary Spirit</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="xingchenmao">
+      <h2>Xingchenmao UI Pose Sheet V2.1</h2>
+      <p class="note">Natural cat body language. This replaces the rejected human-like pose sheet.</p>
+      <div class="grid">
+        <figure><img src="images/xingchenmao-v2/01-loaf-loading.png" alt="Loaf Loading"><figcaption><span class="status">Accepted</span>01 Loaf Loading</figcaption></figure>
+        <figure><img src="images/xingchenmao-v2/02-natural-guiding-walk.png" alt="Natural Guiding Walk"><figcaption><span class="status">Accepted</span>02 Natural Guiding Walk</figcaption></figure>
+        <figure><img src="images/xingchenmao-v2/03-tail-hint-v2-1.png" alt="Tail Hint"><figcaption><span class="status">Accepted</span>03 Tail Hint v2.1</figcaption></figure>
+        <figure><img src="images/xingchenmao-v2/04-natural-curious-crouch.png" alt="Natural Curious Crouch"><figcaption><span class="status">Accepted</span>04 Natural Curious Crouch</figcaption></figure>
+        <figure><img src="images/xingchenmao-v2/05-paw-step-node-activation.png" alt="Paw Step Node Activation"><figcaption><span class="status">Accepted</span>05 Paw Step Node Activation</figcaption></figure>
+        <figure><img src="images/xingchenmao-v2/06-close-reassuring-companion-v2-1.png" alt="Close Reassuring Companion"><figcaption><span class="status">Accepted</span>06 Reassuring Companion v2.1</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="armillary">
+      <h2>Mini Armillary Spirit Motion Sheet V1</h2>
+      <p class="note">Warm living astrological instrument. Cute, but not a second mascot.</p>
+      <div class="grid">
+        <figure><img src="images/armillary-motion/01-idle-hover.png" alt="Idle Hover"><figcaption><span class="status">Accepted</span>01 Idle Hover</figcaption></figure>
+        <figure><img src="images/armillary-motion/02-calculating-orbit.png" alt="Calculating Orbit"><figcaption><span class="status">Accepted</span>02 Calculating Orbit</figcaption></figure>
+        <figure><img src="images/armillary-motion/03-evidence-scan.png" alt="Evidence Scan"><figcaption><span class="status">Accepted</span>03 Evidence Scan</figcaption></figure>
+        <figure><img src="images/armillary-motion/04-node-activation.png" alt="Node Activation"><figcaption><span class="status">Accepted</span>04 Node Activation</figcaption></figure>
+        <figure><img src="images/armillary-motion/05-report-reveal.png" alt="Report Reveal"><figcaption><span class="status">Accepted</span>05 Report Reveal</figcaption></figure>
+        <figure><img src="images/armillary-motion/06-gentle-attention.png" alt="Gentle Attention"><figcaption><span class="status">Accepted</span>06 Gentle Attention</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="opening">
+      <h2>Opening Companion Reveal Sequence V1</h2>
+      <p class="note">Cat and spirit appear only after the hidden door opens.</p>
+      <div class="grid">
+        <figure><img src="images/opening-companion/01-door-opens-first-appearance.png" alt="Door Opens First Appearance"><figcaption><span class="status">Accepted</span>01 Door Opens: First Appearance</figcaption></figure>
+        <figure><img src="images/opening-companion/02-cat-steps-out.png" alt="Cat Steps Out"><figcaption><span class="status">Accepted</span>02 Cat Steps Out</figcaption></figure>
+        <figure><img src="images/opening-companion/03-threshold-guidance.png" alt="Threshold Guidance"><figcaption><span class="status">Accepted</span>03 Threshold Guidance</figcaption></figure>
+        <figure><img src="images/opening-companion/04-entry-invitation.png" alt="Entry Invitation"><figcaption><span class="status">Accepted</span>04 Entry Invitation</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="observatory">
+      <h2>Living Observatory Microstates V1.1</h2>
+      <p class="note">Subtle living-space animation states. Alive, but never theatrical.</p>
+      <div class="grid">
+        <figure><img src="images/living-observatory/01-breathing-dome.png" alt="Breathing Dome"><figcaption><span class="status">Accepted</span>01 Breathing Dome</figcaption></figure>
+        <figure><img src="images/living-observatory/02-star-map-responds.png" alt="Star Map Responds"><figcaption><span class="status">Accepted</span>02 Star Map Responds</figcaption></figure>
+        <figure><img src="images/living-observatory/03-book-page-turns.png" alt="Book Page Turns"><figcaption><span class="status">Accepted</span>03 Book Page Turns</figcaption></figure>
+        <figure><img src="images/living-observatory/04-crystal-pulse.png" alt="Crystal Pulse"><figcaption><span class="status">Accepted</span>04 Crystal Pulse</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="hands">
+      <h2>Astraea Hands / Desk Gesture Sheet V1</h2>
+      <p class="note">Duty gestures for chart witnessing. Safer than regenerating Astraea's face.</p>
+      <div class="grid">
+        <figure><img src="images/astraea-hands/01-resting-on-zodiac-ring.png" alt="Resting on Zodiac Ring"><figcaption><span class="status">Accepted</span>01 Resting on Zodiac Ring</figcaption></figure>
+        <figure><img src="images/astraea-hands/02-evidence-node-point.png" alt="Evidence Node Point"><figcaption><span class="status">Accepted</span>02 Evidence Node Point</figcaption></figure>
+        <figure><img src="images/astraea-hands/03-parchment-hold.png" alt="Parchment Hold"><figcaption><span class="status">Accepted</span>03 Parchment Hold</figcaption></figure>
+        <figure><img src="images/astraea-hands/04-report-writing.png" alt="Report Writing"><figcaption><span class="status">Accepted</span>04 Report Writing</figcaption></figure>
+        <figure><img src="images/astraea-hands/05-turning-zodiac-ring.png" alt="Turning Zodiac Ring"><figcaption><span class="status">Accepted</span>05 Turning Zodiac Ring</figcaption></figure>
+        <figure><img src="images/astraea-hands/06-report-revelation-hand-pause.png" alt="Report Revelation Hand Pause"><figcaption><span class="status">Accepted</span>06 Report Revelation Hand Pause</figcaption></figure>
+      </div>
+    </section>
   </main>
 </body>
 </html>

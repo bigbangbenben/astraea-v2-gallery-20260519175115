@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astraea V2 Production Plan Options</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08060d;
+      --panel: #14101c;
+      --panel2: #0f0b15;
+      --line: #30243d;
+      --text: #f5eef9;
+      --muted: #c3b0ce;
+      --gold: #d7ad63;
+      --violet: #8d6aa5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top left, #21172d 0, #08060d 42%, #050408 100%);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 22px 14px 46px; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(8, 6, 13, .92);
+      backdrop-filter: blur(14px);
+    }
+    .head-inner { max-width: 1120px; margin: 0 auto; }
+    h1, h2, h3 { margin: 0; letter-spacing: 0; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 21px; margin-bottom: 8px; }
+    h3 { font-size: 17px; margin-bottom: 7px; }
+    p { margin: 0 0 10px; }
+    .subtitle, .note { color: var(--muted); }
+    .section { margin: 18px 0; }
+    .label {
+      margin-bottom: 8px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .mockup, .card {
+      border: 1px solid var(--line);
+      background: rgba(20, 16, 28, .82);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .mockup-header {
+      padding: 10px 12px;
+      color: var(--gold);
+      border-bottom: 1px solid var(--line);
+      background: rgba(15, 11, 21, .96);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .mockup-body { padding: 14px; }
+    .placeholder {
+      min-height: 76px;
+      border: 1px solid rgba(215, 173, 99, .26);
+      background: rgba(8, 6, 13, .55);
+      border-radius: 8px;
+      padding: 12px;
+      color: var(--muted);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    .card-body { padding: 14px; }
+    .mock-button {
+      display: inline-block;
+      padding: 8px 10px;
+      border: 1px solid rgba(215,173,99,.35);
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(10, 7, 15, .85);
+      font-size: 13px;
+    }
+    .recommend {
+      border-color: rgba(215, 173, 99, .75);
+      box-shadow: 0 0 0 1px rgba(215, 173, 99, .18), 0 18px 60px rgba(0,0,0,.28);
+    }
+    .pill {
+      display: inline-block;
+      color: #08060d;
+      background: var(--gold);
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    a { color: var(--gold); }
+    @media (min-width: 840px) {
+      h1 { font-size: 28px; }
+      .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      main { padding: 30px 22px 58px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="head-inner">
+      <h1>Astraea V2 產圖計劃選項</h1>
+      <div class="subtitle">Project research summary + next production direction. Updated 2026-05-22.</div>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <h2>先選主路線</h2>
+      <p class="subtitle">我已讀完目前專案文件與資產狀態。現在不是重開角色圖，而是補 product-flow 缺口。請先選接下來 1-2 輪的主路線。</p>
+    </section>
+
+    <section class="section">
+      <div class="label">Current foundation</div>
+      <div class="mockup">
+        <div class="mockup-header">已鎖定 / 可用的基礎</div>
+        <div class="mockup-body">
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+            <div class="placeholder"><strong>Canon locked</strong><br>Astraea Core v1.2<br>Hidden Door / Observatory / Desk<br>Xingchenmao / Armillary</div>
+            <div class="placeholder"><strong>Product-test accepted</strong><br>Birth Input<br>Success Background Clean<br>Cat + Armillary Success layers</div>
+            <div class="placeholder"><strong>Current best composite</strong><br>Success / Processing v2<br>Loaf Waiting + Calculating Orbit</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card recommend">
+        <div class="mockup-header">A. Funnel First</div>
+        <div class="mockup-body">
+          <span class="mock-button">Birth Input 已有</span>
+          <span>→</span>
+          <span class="mock-button">Teaser Reveal</span>
+          <span>→</span>
+          <span class="mock-button">Checkout Trust</span>
+          <span>→</span>
+          <span class="mock-button">Success 已有</span>
+          <span>→</span>
+          <span class="mock-button">Report Entry 候選</span>
+        </div>
+        <div class="card-body">
+          <span class="pill">推薦</span>
+          <h3>先補轉換漏斗</h3>
+          <p>先做 Teaser Reveal + Checkout Trust，因為這兩張直接決定使用者是否相信「系統真的已經抽取星盤證據」並願意付款。</p>
+          <p><strong>下一批：</strong>Teaser Reveal 16:9 / 9:16、Checkout Trust 16:9 / 9:16。</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="mockup-header">B. Report UX First</div>
+        <div class="mockup-body">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div class="placeholder">Report Cover</div>
+            <div class="placeholder">Section Divider</div>
+            <div class="placeholder">Evidence Block</div>
+            <div class="placeholder">Astraea Note</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>先做付費報告質感</h3>
+          <p>如果現在最擔心「買完後看起來值不值」，可以先做報告視覺系統，建立高單價 digital report 的版面語言。</p>
+          <p><strong>下一批：</strong>Report Cover、Section Divider、Evidence Block、Astraea Note Box。</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="mockup-header">C. Motion Layer First</div>
+        <div class="mockup-body">
+          <span class="mock-button">Door loop</span>
+          <span class="mock-button">Desk activation</span>
+          <span class="mock-button">Cat blink</span>
+          <span class="mock-button">Armillary orbit</span>
+        </div>
+        <div class="card-body">
+          <h3>先做動畫語言</h3>
+          <p>如果目標是讓世界先「動起來」，可以先做可動畫化分層素材。但這比較容易推遲漏斗缺口。</p>
+          <p><strong>下一批：</strong>Hidden Door microstates、Desk activation frames、Cat/Armillary loop references。</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="mockup">
+        <div class="mockup-header">Recommendation</div>
+        <div class="mockup-body">
+          <p>我建議選 <strong>A. Funnel First</strong>。</p>
+          <p>原因：Birth Input 與 Success 已有 Product-Test 資產，現在漏斗中間缺的是 <strong>Teaser Reveal</strong> 和 <strong>Checkout Trust</strong>。這兩張會把「輸入資料」接到「願意付款」之間的信任橋補起來。</p>
+          <p>確認後，下一步我會寫正式產圖計劃文件：每張圖的目的、母圖來源、禁區、產出尺寸、驗收標準、畫廊更新規則。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

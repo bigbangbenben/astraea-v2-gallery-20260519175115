@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>藇 Character Exploration</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08060d;
+      --panel: #14101c;
+      --line: #2f253b;
+      --text: #f4edf8;
+      --muted: #b9a9c6;
+      --gold: #d5a95f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      padding: 14px;
+      background: rgba(8, 6, 13, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+    .sub {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-top: 12px;
+    }
+    nav a {
+      flex: 0 0 auto;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: #110d17;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 13px;
+    }
+    main {
+      padding: 14px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    figure {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #050408;
+    }
+    figcaption {
+      padding: 9px 10px 10px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+    }
+    .status {
+      display: inline-block;
+      margin-right: 6px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .note {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>藇 Character Exploration</h1>
+    <div class="sub">Four first-pass GPT Image 2 directions. Eye rule: luminous gold dominant with subtle violet gradient glow.</div>
+    <nav>
+      <a href="index.html">Main Gallery</a>
+      <a href="product-flow-batch1.html">Batch 1 Review</a>
+    </nav>
+  </header>
+  <main>
+    <p class="note">Review purpose: choose the base hair / aura direction, not final canon. These are exploration candidates.</p>
+    <div class="grid">
+      <figure>
+        <img src="images/yue-character-exploration/yue-character-version-a-long-black-hair.png" alt="Version A long straight black hair">
+        <figcaption><span class="status">A</span>Long Straight Black Hair — strongest cold mystery</figcaption>
+      </figure>
+      <figure>
+        <img src="images/yue-character-exploration/yue-character-version-b-dark-violet-wavy-hair.png" alt="Version B long wavy dark violet hair">
+        <figcaption><span class="status">B</span>Long Wavy Dark-Violet Hair — strongest languid allure</figcaption>
+      </figure>
+      <figure>
+        <img src="images/yue-character-exploration/yue-character-version-c-silver-white-updo.png" alt="Version C silver white loose updo">
+        <figcaption><span class="status">C</span>Silver-White Loose Updo — strongest timeless / otherworldly</figcaption>
+      </figure>
+      <figure>
+        <img src="images/yue-character-exploration/yue-character-version-d-plum-violet-short-hair.png" alt="Version D sleek medium short plum violet hair">
+        <figcaption><span class="status">D</span>Sleek Medium-Short Plum-Violet Hair — strongest modern / chic</figcaption>
+      </figure>
+    </div>
+  </main>
+</body>
+</html>

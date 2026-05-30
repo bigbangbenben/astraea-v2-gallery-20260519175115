@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>觀星閣 · 角色圖像生產包 v1</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08060d;
+      --panel: #14101c;
+      --line: #2f253b;
+      --text: #f4edf8;
+      --muted: #b9a9c6;
+      --gold: #d5a95f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      padding: 14px;
+      background: rgba(8, 6, 13, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+    .sub {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-top: 12px;
+    }
+    nav a {
+      flex: 0 0 auto;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: #110d17;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 13px;
+    }
+    main {
+      padding: 14px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    h2 {
+      margin: 28px 0 8px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    .note {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .grid.compact {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    figure {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #f6f4f2;
+    }
+    figcaption {
+      padding: 9px 10px 10px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+    }
+    .status {
+      display: inline-block;
+      margin-right: 6px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid.compact { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>觀星閣 · 角色圖像生產包 v1</h1>
+    <div class="sub">Canon inputs, manual single-view crops, Wei face anchor and expressions, and yeye reaction references.</div>
+    <nav>
+      <a href="index.html">Main Gallery</a>
+      <a href="#overview">Overview</a>
+      <a href="#canon">正典原圖</a>
+      <a href="#crops">四視圖單張</a>
+      <a href="#wei">藇參考組</a>
+      <a href="#yeye">yeye 反應組</a>
+      <a href="prologue-ch11-prompt-pack.html">序章 + 第 11 章</a>
+    </nav>
+  </header>
+  <main>
+    <p class="note">Production rule: the four user-supplied images remain the canon source. The generated Wei and yeye images below are reference assets, not new canon masters.</p>
+
+    <h2 id="overview">Overview</h2>
+    <div class="grid">
+      <figure>
+        <img src="images/character-production-pack-v1-20260530/gallery/character-production-pack-v1-overview.jpg" alt="Character production pack overview">
+        <figcaption><span class="status">QA</span>All cropped references and generated reference images in one overview.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="canon">PART 0 · 四張正典</h2>
+    <p class="note">Uploaded exactly as supplied, kept separate from generated derivatives.</p>
+    <div class="grid compact">
+      <figure><img src="images/character-production-pack-v1-20260530/source/wei-fullbody-canon.jpg" alt="Wei full-body canon"><figcaption><span class="status">Canon</span>藇 全身定裝圖</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/source/wei-turnaround-canon.jpg" alt="Wei turnaround canon"><figcaption><span class="status">Canon</span>藇 四視圖轉面表</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/source/yeye-front-canon.jpg" alt="Yeye front canon"><figcaption><span class="status">Canon</span>yeye 正面圖</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/source/yeye-turnaround-canon.jpg" alt="Yeye turnaround canon"><figcaption><span class="status">Canon</span>yeye 四視圖轉面表</figcaption></figure>
+    </div>
+
+    <h2 id="crops">PART 0 · 手動裁切單張</h2>
+    <p class="note">These are direct crops from the four-view sheets, used to avoid multi-view label confusion in later prompts.</p>
+    <div class="grid">
+      <figure>
+        <img src="images/character-production-pack-v1-20260530/gallery/cropped-reference-sheet.jpg" alt="Cropped reference contact sheet">
+        <figcaption><span class="status">QA</span>Eight clean single-view crops.</figcaption>
+      </figure>
+    </div>
+    <div class="grid compact">
+      <figure><img src="images/character-production-pack-v1-20260530/crops/wei/wei-front.png" alt="Wei front crop"><figcaption>藇 正面</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/crops/wei/wei-side.png" alt="Wei side crop"><figcaption>藇 側面</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/crops/wei/wei-back.png" alt="Wei back crop"><figcaption>藇 背面</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/crops/wei/wei-three-quarter.png" alt="Wei three-quarter crop"><figcaption>藇 四分之三</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/crops/yeye/yeye-front.png" alt="Yeye front crop"><figcaption>yeye 正面</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/crops/yeye/yeye-side.png" alt="Yeye side crop"><figcaption>yeye 側面</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/crops/yeye/yeye-back.png" alt="Yeye back crop"><figcaption>yeye 背面</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/crops/yeye/yeye-rear-side.png" alt="Yeye rear-side crop"><figcaption>yeye 側後</figcaption></figure>
+    </div>
+
+    <h2 id="wei">PART 1 · 藇臉錨與 6 表情</h2>
+    <p class="note">Neutral character-reference lighting. Single generated assets below contain no labels or in-image text.</p>
+    <div class="grid">
+      <figure>
+        <img src="images/character-production-pack-v1-20260530/gallery/wei-expression-contact-sheet.jpg" alt="Wei expression contact sheet">
+        <figcaption><span class="status">QA</span>Face anchor + six expression references.</figcaption>
+      </figure>
+    </div>
+    <div class="grid compact">
+      <figure><img src="images/character-production-pack-v1-20260530/generated/wei-face-anchor.png" alt="Wei face anchor"><figcaption><span class="status">Face Anchor</span>藇 臉錨</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/generated/wei-expression-01-serene-gentle.png" alt="Wei serene gentle expression"><figcaption>01 serene and gentle</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/generated/wei-expression-02-piercing-gaze.png" alt="Wei piercing gaze expression"><figcaption>02 piercing gaze</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/generated/wei-expression-03-tender-warmth.png" alt="Wei tender warmth expression"><figcaption>03 tender warmth</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/generated/wei-expression-04-grave-sombre.png" alt="Wei grave sombre expression"><figcaption>04 grave and sombre</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/generated/wei-expression-05-peaceful-released.png" alt="Wei peaceful released expression"><figcaption>05 peaceful and released</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/generated/wei-expression-06-wistful-melancholic.png" alt="Wei wistful melancholic expression"><figcaption>06 wistful melancholic</figcaption></figure>
+    </div>
+
+    <h2 id="yeye">PART 1 · yeye 5 反應表</h2>
+    <p class="note">Neutral character-reference lighting. Star-tip antennae, forehead star, chest star, and star-map wings are retained.</p>
+    <div class="grid">
+      <figure>
+        <img src="images/character-production-pack-v1-20260530/gallery/yeye-reaction-contact-sheet.jpg" alt="Yeye reaction contact sheet">
+        <figcaption><span class="status">QA</span>Five generated reaction references.</figcaption>
+      </figure>
+    </div>
+    <div class="grid compact">
+      <figure><img src="images/character-production-pack-v1-20260530/generated/yeye-reaction-01-curious-looking-up.png" alt="Yeye curious looking up"><figcaption>01 curious, looking up</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/generated/yeye-reaction-02-nestled-cozy.png" alt="Yeye nestled cozy"><figcaption>02 nestled, curled up cozy</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/generated/yeye-reaction-03-wings-folded-resting.png" alt="Yeye wings folded resting"><figcaption>03 wings folded, resting</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/generated/yeye-reaction-04-sleepy-eyes-closed.png" alt="Yeye sleepy eyes closed"><figcaption>04 sleepy, eyes closed</figcaption></figure>
+      <figure><img src="images/character-production-pack-v1-20260530/generated/yeye-reaction-05-wings-spread-glow.png" alt="Yeye wings spread glowing"><figcaption>05 wings fully spread, gentle glow</figcaption></figure>
+    </div>
+  </main>
+</body>
+</html>
